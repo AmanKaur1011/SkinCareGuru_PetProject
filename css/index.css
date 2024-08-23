@@ -1,0 +1,144 @@
+/* Default body styling */
+body {
+  font-size: 1.2em;
+  margin: auto;
+  margin-top: 5%;
+  padding: 3%;
+  width: 50%;
+  border: 2px solid green;
+  border-radius: 15px;
+  background-color: rgb(222, 243, 222);
+}
+/* Styling for the NOTE message at the bottom  of the page */
+#note {
+  margin-top: 20px;
+  display: none;
+  color: Red;
+}
+/* Styling for the Error messages */
+#skinconcernError,
+#skintypeError {
+  color: red;
+}
+/* Buttons styling */
+#subButton {
+    margin: auto;
+  }
+  #submit {
+    margin: auto;
+    width: 20%;
+    padding: 5px;
+    position: relative;
+    left: 40%;
+    background-color: rgb(142, 237, 142);
+    border-radius: 5px;
+    font-weight: bold;
+    box-shadow: 3px 3px 2px #888888;
+  }
+#print {
+  margin: auto;
+  position: absolute;
+  left: 85%;
+  top: 10%;
+  padding: 7px 15px 7px 15px;
+  background-color: rgb(142, 237, 142);
+  border-radius: 5px;
+  font-weight: bold;
+  box-shadow: 3px 3px 2px #888888;
+}
+#back {
+  margin: auto;
+  padding: 7px 15px 7px 15px;
+  background-color: rgb(142, 237, 142);
+  border-radius: 5px;
+  font-weight: bold;
+  box-shadow: 3px 3px 2px #888888;
+}
+#pdf {
+  margin: auto;
+  position: absolute;
+  left: 85%;
+  top: 17%;
+  padding: 7px 15px 7px 15px;
+  background-color: rgb(142, 237, 142);
+  border-radius: 5px;
+  font-weight: bold;
+  box-shadow: 3px 3px 2px #888888;
+}
+/* Styling for the H3 */
+main h3 {
+  box-shadow: 3px 3px 2px #888888;
+}
+h3 {
+  border: 2px solid darkgreen;
+  border-radius: 5px;
+  box-shadow: 5px 5px 8px #888888;
+  padding: 5px;
+}
+#ddSkinConcern,
+#ddSkinType {
+  display: none;
+}
+/* Styling for the customized routine window*/
+#customRoutine {
+  display: none;
+  width: 100%;
+}
+#customRoutine h3 {
+  background-color: rgb(142, 237, 142);
+}
+#msg{
+color:#006400;
+}
+#days {
+  margin-top: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 100px;
+  justify-content: center;
+}
+#monday,#tuesday,#wednesday,#thursday,#friday,#saturday,#sunday {
+  box-shadow: 5px 5px 8px #888888;
+  background-color: rgb(238, 240, 235);
+  border-radius: 15px;
+  padding: 15px;
+}
+#monday,#tuesday,#wednesday,#thursday,#friday,#saturday,#sunday {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    /* flex-basis: auto ; */
+  }
+
+.morning,
+.evening {
+  box-shadow: 5px 5px 8px #888888;
+  background-color: rgb(216, 231, 194);
+  border-radius: 5px;
+  padding: 15px;
+}
+h4 {
+  text-align: center;
+  width: 100%;
+}
+.bodystyles {
+  font-size: 1em;
+  width: auto;
+  margin: auto;
+  border: none;
+}
+#monday h3,
+#tuesday h3,
+#wednesday h3,
+#thursday h3,
+#friday h3,
+#saturday h3,
+#sunday h3 {
+  text-align: center;
+  width: 100%;
+  border: none;
+  /* padding: auto; */
+  color: #006400;
+}

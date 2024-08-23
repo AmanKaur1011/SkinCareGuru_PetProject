@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Skin Care Guru</title>
+    <link rel="stylesheet" type="text/css" href="css/index.css"><!--stylesheet link-->
+    <script src="js/jquery-3.7.1.min.js"></script><!--jQuery-->
+    <script src="js/index.js"></script><!--Js File-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.3.2/jspdf.min.js"></script><!--CDN link for jdPDF library-->
+</head>
+<body>
+    <header>
+        <!--Header for the Page-->
+        <h1>SKIN CARE GURU</h1>
+        <p class="headerp">Looking for a skincare routine?? </p>
+        <p class="headerp">Enter the information below to get your cutomized routine</p>
+        <p class="headerp">Click on each field to select your Skin Concern and Skin Type</p>
+    </header>
+    <main>
+        <!--Input fields-->
+        <div id="input">
+            <!--Form to collect information about the user's skin-->
+        <form id="myForm">
+            <!--User's Skin Concern-->
+            <div id="skinconcern">
+                <h3>What's your skin Concern</h3>
+                <div id="ddSkinConcern">
+                   <!--Options for skin concern-->
+                    <input type="radio" id="acne" name="skinconcerns" value="acne">
+                    <label for="acne">Acne </label>
+
+                    <input type="radio" id="pores" name="skinconcerns" value="pores">
+                    <label for="pores">Clogged Pores</label>
+
+                    <input type="radio" id="wrinkles" name="skinconcerns" value="wrinkles">
+                    <label for="wrinkles">Fine lines and Wrinkles</label>
+                </div>
+                <div id="skinconcernError"></div><!--handles error messages-->
+            </div>
+             <!--User's Skin Type-->
+            <div id="skintype">
+                <h3>What's your Skin Type?</h3>
+                <!--Options for skin type-->
+                <div id="ddSkinType">
+                    <select name="skintypes">
+                        <option value="0">Select Your Skin Type</option> 
+                        <option value="oily">Oily</option>
+                        <option value="dry">Dry</option>
+                        <option value="normal">Normal</option>
+                    </select>
+                </div>
+                <div id="skintypeError"></div><!--handles error messages-->
+            </div>
+            <!--Submit Button for form-->
+            <div id="subButton">
+            <button id="submit">Submit</button></div>
+        </form><!--Form End-->
+    </div>
+    <!--This section provides the customized routine based on the data entered by the user-->
+        <section id="customRoutine">
+            <h2>Customized Routine for You</h2>
+            <p id="msg">Recovery day- means time for the recovery of skin, no treatment needed. Skip step 3 on that day</p>
+             <!--Print Button to print the customized routine generated-->
+            <div> <button id="print">Print</button></div>
+           <!---Back Button to go back to the form page where data was initially entered-->
+            <div> <button id="back">Back to skincare form</button></div>
+            <!-- Download pdf Button to download the customized routine generated in pdf format -->
+            <div> <button id="pdf">Download pdf</button></div>
+           <!--******************Customized Routine********************************* -->
+            <div id="days">
+            <div id="monday">
+             <!--Monday-->
+                <h3>Monday</h3>
+                <div class="morning">
+                    <h4>Morning</h4>
+                <p class="cleanser"><strong>Step 1</strong> - Cleanser: </p>
+                <p class="toner"><strong>Step 2</strong> - Toner: </p>
+                <p class="moisturize"><strong>Step 3</strong> - Moisturizer: </p>
+                <p class="sunscreen"><strong>Step 4</strong> - Sunscreen: </p>
+            </div>
+            <div class="evening">
+                <h4>Evening</h4>
+                
+                <p class="cleanser"><strong>Step 1</strong> - Cleanser: </p>
+                <p class="toner"><strong>Step 2</strong> - Toner: </p>
+                <p class="treatment"><strong>Step 3</strong> - Treatment: <span></span></p>
+                <p class="moisturize"><strong>Step 4</strong> - Moisturizer: </p>
+            </div>
+            </div>
+            <!--Tuesday-->
+            <div id="tuesday">
+                <h3>Tuesday</h3>
+                <div class="morning"><h4>Morning</h4>
+                    <p class="cleanser"><strong>Step 1</strong> - Cleanser: </p>
+                    <p class="toner"><strong>Step 2</strong> - Toner: </p>
+                    <p class="moisturize"><strong>Step 3</strong> - Moisturizer: </p>
+                    <p class="sunscreen"><strong>Step 4</strong> - Sunscreen: </p>
+                </div>
+                <div class="evening"><h4>Evening</h4>
+                    <p class="cleanser"><strong>Step 1</strong> - Cleanser: </p>
+                    <p class="toner"><strong>Step 2</strong> - Toner: </p>
+                    <p class="treatment"><strong>Step 3</strong> - Treatment: <span></span></p>
+                    <p class="moisturize"><strong>Step 4</strong> - Moisturizer: </p>
+                </div>
+            </div>
+            <!--Wednesday-->
+            <div id="wednesday">
+                <h3>Wednesday</h3>
+                <div class="morning"><h4>Morning</h4>
+                    <p class="cleanser"><strong>Step 1</strong> - Cleanser: </p>
+                    <p class="toner"><strong>Step 2</strong> - Toner: </p>
+                    <p class="moisturize"><strong>Step 3</strong> - Moisturizer: </p>
+                    <p class="sunscreen"><strong>Step 4</strong> - Sunscreen: </p>
+                </div>
+                <div class="evening"><h4>Evening</h4>
+                    <p class="cleanser"><strong>Step 1</strong> - Cleanser: </p>
+                    <p class="toner"><strong>Step 2</strong> - Toner: </p>
+                    <p class="treatment"><strong>Step 3</strong> - Treatment: <span></span></p>
+                    <p class="moisturize"><strong>Step 4</strong> - Moisturizer: </p>
+                </div>
+            </div>
+            <!--Thursday-->
+            <div id="thursday">
+                <h3>Thursday</h3>
+                <div class="morning"><h4>Morning</h4>
+                    <p class="cleanser"><strong>Step 1</strong> - Cleanser: </p>
+                    <p class="toner"><strong>Step 2</strong> - Toner: </p>
+                    <p class="moisturize"><strong>Step 3</strong> - Moisturizer: </p>
+                    <p class="sunscreen"><strong>Step 4</strong> - Sunscreen: </p>
+                </div>
+                <div class="evening"><h4>Evening</h4>
+                    <p class="cleanser"><strong>Step 1</strong> - Cleanser: </p>
+                    <p class="toner"><strong>Step 2</strong> - Toner: </p>
+                    <p class="treatment"><strong>Step 3</strong> - Treatment: <span></span></p>
+                    <p class="moisturize"><strong>Step 4</strong> - Moisturizer: </p>
+                </div>
+            </div>
+            <!--Friday-->
+            <div id="friday">
+                <h3>Friday</h3>
+                <div class="morning"><h4>Morning</h4>
+                    <p class="cleanser"><strong>Step 1</strong> - Cleanser: </p>
+                    <p class="toner"><strong>Step 2</strong> - Toner: </p>
+                    <p class="moisturize"><strong>Step 3</strong> - Moisturizer: </p>
+                    <p class="sunscreen"><strong>Step 4</strong> - Sunscreen: </p>
+                </div>
+                <div class="evening"><h4>Evening</h4>
+                    <p class="cleanser"><strong>Step 1</strong> - Cleanser: </p>
+                    <p class="toner"><strong>Step 2</strong> - Toner: </p>
+                    <p class="treatment"><strong>Step 3</strong> - Treatment: <span></span></p>
+                    <p class="moisturize"><strong>Step 4</strong> - Moisturizer: </p>
+                </div>
+            </div>
+            <!--Saturday-->
+            <div id="saturday">
+                <h3>Saturday</h3>
+                <div class="morning"><h4>Morning</h4>
+                    <p class="cleanser"><strong>Step 1</strong> - Cleanser: </p>
+                    <p class="toner"><strong>Step 2</strong> - Toner: </p>
+                    <p class="moisturize"><strong>Step 3</strong> - Moisturizer: </p>
+                    <p class="sunscreen"><strong>Step 4</strong> - Sunscreen: </p>
+                </div>
+                <div class="evening"><h4>Evening</h4>
+                    <p class="cleanser"><strong>Step 1</strong> - Cleanser: </p>
+                    <p class="toner"><strong>Step 2</strong> - Toner: </p>
+                    <p class="treatment"><strong>Step 3</strong> - Treatment: <span></span></p>
+                    <p class="moisturize"><strong>Step 4</strong> - Moisturizer: </p>
+                </div>
+            </div>
+            <!--Sunday-->
+            <div id="sunday">
+                <h3>Sunday</h3>
+                <div class="morning"><h4>Morning</h4>
+                    <p class="cleanser"><strong>Step 1</strong> - Cleanser: </p>
+                    <p class="toner"><strong>Step 2</strong> - Toner: </p>
+                    <p class="moisturize"><strong>Step 3</strong> - Moisturizer: </p>
+                    <p class="sunscreen"><strong>Step 4</strong> - Sunscreen: </p>
+                </div>
+                <div class="evening"><h4>Evening</h4>
+                    <p class="cleanser"><strong>Step 1</strong> - Cleanser: </p>
+                    <p class="toner"><strong>Step 2</strong> - Toner: </p>
+                    <p class="treatment"><strong>Step 3</strong> - Treatment: <span></span></p>
+                    <p class="moisturize"><strong>Step 4</strong> - Moisturizer: </p>
+                
+            </div>
+            </div>
+        </div>
+        </section>
+
+    </main>
+    <!--Footer of the page-->
+    <footer><div id="note">NOTE: All recommendation are based on personal experience. Do the patch test before using any product and if suffering from any severe skin condition do consult with doctor before using any product</div>
+    <!-- <div> &copy; Copyright Amanpreet Kaur HTTP5121,2024. </div> -->
+</footer>
+</body>
+
+</html>
